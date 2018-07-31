@@ -1,0 +1,12 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    'indent': [2, 'tab', { "SwitchCase": 1, "VariableDeclarator": 2 }],
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jasmine": true
+  },
+}

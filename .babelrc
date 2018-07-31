@@ -1,0 +1,58 @@
+{
+  "env": {
+    "development": {
+      "presets": [
+        ["next/babel", {
+          "preset-env": {"modules": "commonjs"},
+          "transform-runtime": {}
+        }],
+        "@babel/preset-stage-3",
+      ],
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        ["@babel/plugin-proposal-export-default-from"],
+        ["inline-dotenv", {
+          path: './.env'
+        }],
+        ["transform-inline-environment-variables", {
+          "include": [
+          ]
+        }],
+      ]
+    },
+    "build": {
+      "presets": [
+        ["next/babel"],
+        "@babel/preset-stage-3",
+      ],
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        ["@babel/plugin-proposal-export-default-from"],
+        ["inline-dotenv", {
+          path: './.env.production'
+        }],
+        ["transform-inline-environment-variables", {
+          "include": [
+          ]
+        }],
+      ]
+    },
+    "production": {
+      "presets": [
+        ["next/babel"],
+        "@babel/preset-stage-3",
+      ],
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        ["@babel/plugin-proposal-export-default-from"],
+        ["inline-dotenv", {
+          path: './.env.production'
+        }],
+        ["transform-inline-environment-variables", {
+          "include": [
+          ]
+        }],
+      ]
+    }
+  }
+}
